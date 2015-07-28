@@ -25,14 +25,14 @@ report: check-ipfs
 	cp Makefile report/Makefile # to spread the love
 
 bootstrap: check-ipfs
-	@echo "--> publishing netinspect"
+	@echo "--> publishing netreport"
 	@export ipath=$(shell ipfs add -q -w Makefile | tail -n1 | sed s/\\/Makefile// ); \
-		echo "published netinspect $$ipath"; \
+		echo "published netreport $$ipath"; \
 		echo "$(lgway)$$ipath"; \
 		echo "$(ggway)$$ipath"; \
 		echo "tell the user to run:"; \
-		echo "\n\tipfs get -o netinspect /ipfs/$$ipath"; \
-		echo "\tcd netinspect"; \
+		echo "\n\tipfs get -o netreport /ipfs/$$ipath"; \
+		echo "\tcd netreport"; \
 		echo "\tmake";
 
 clean:
