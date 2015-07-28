@@ -31,9 +31,8 @@ bootstrap: check-ipfs
 		echo "$(lgway)$$ipath"; \
 		echo "$(ggway)$$ipath"; \
 		echo "tell the user to run:"; \
-		echo "\n\tipfs get -o netreport /ipfs/$$ipath"; \
-		echo "\tcd netreport"; \
-		echo "\tmake";
+		echo "\n\tipfs get -o netreport /ipfs/$$ipath \\";\
+		echo "\t  && cd netreport && make\n"; \
 
 clean:
 	rm reports
